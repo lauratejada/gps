@@ -1,0 +1,70 @@
+@import url(reset.css);
+
+:root {
+    --app-body-background-color: #fff;
+    --app-body-text-color: #565656; 
+    --app-body-box-shadow: 0 0.275rem 1.25rem rgb(11 15 25 / 5%), 0 0.25rem 0.5625rem rgb(11 15 25 / 3%);
+    --app-gray-section: #f3f6ff;
+    --app-title-color: #0b0f19;
+    --app-header-background-color: #fff;
+    --app-header-text-color: #0b0f19;
+    --app-header-menu-text-color: #33354d;
+    --app-button-background-color: #35b8be;
+    --app-button-text-color: #fff;
+    --app-button-hover-background-color: #fff;
+    --app-button-hover-text-color: #35b8be;   
+    --app-footer-background-color: #0b0f19;
+    --app-footer-text-color: #fff;
+}
+
+body {
+    background-color: #0b0f19;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+main {
+    height: auto;
+}
+
+section {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+div.loading {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color: #d8d8d8;
+    border: 3px solid #d8d8d8;
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid transparent; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .map {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(221, 221, 221);
+  }
+
+  .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-top-left {
+    display: none !important; 
+  }
